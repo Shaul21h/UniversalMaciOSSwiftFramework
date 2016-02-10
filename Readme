@@ -1,0 +1,15 @@
+To rename the framework from SwiftyGmail to NewFrameworkName do the following:
+
+1.
+Open the Xcode project and rename the project to NewFrameworkName.
+When asked if to rename other resources, choose "Don't Rename"
+
+
+2.
+Run the following commands:
+
+export LANG=C
+find ./ -type f -exec sed -i "" -e "s/SwiftyGmail/NewFrameworkName/g" {} +
+
+3.
+Open the Xcode project again, and rename the schemes appropriately.
